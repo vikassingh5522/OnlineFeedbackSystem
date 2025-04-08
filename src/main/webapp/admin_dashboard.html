@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <style>
+        /* Google Font */
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: url('https://images.pexels.com/photos/1227511/pexels-photo-1227511.jpeg') no-repeat center center/cover;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Overlay for better text readability */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5); 
+        }
+
+        .container {
+            position: relative;
+            max-width: 400px;
+            width: 90%;
+            padding: 30px;
+            text-align: center;
+            background: rgba(255, 255, 255, 0.2); /* Glassmorphism effect */
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: white;
+        }
+
+        h2 {
+            margin-bottom: 10px;
+            font-size: 24px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        p {
+            margin-bottom: 20px;
+            font-size: 16px;
+            font-weight: 300;
+        }
+
+        a {
+            display: block;
+            margin: 12px 0;
+            padding: 12px;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: 0.3s ease-in-out;
+        }
+
+        /* Button styles */
+        .btn {
+            background: linear-gradient(135deg, #007BFF, #0056b3);
+            color: white;
+            box-shadow: 0 4px 8px rgba(0, 123, 255, 0.2);
+        }
+
+        .btn:hover {
+            background: linear-gradient(135deg, #0056b3, #003d80);
+            transform: scale(1.05);
+        }
+
+        .logout {
+            background: linear-gradient(135deg, #ff3b3b, #b30000);
+            color: white;
+            box-shadow: 0 4px 8px rgba(255, 59, 59, 0.3);
+        }
+
+        .logout:hover {
+            background: linear-gradient(135deg, #b30000, #7a0000);
+            transform: scale(1.05);
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Admin Dashboard</h2>
+        <p>Welcome, Admin!</p>
+
+        <a href="questions_management.html" class="btn">Manage Questions</a>
+        <a href="FeedbackResultServlet" class="btn">View Feedback Results</a>
+        <a href="index.html" class="logout">Logout</a>
+    </div>
+
+</body>
+</html>
